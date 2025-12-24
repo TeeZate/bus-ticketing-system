@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-// import { AuthProvider } from './context/AuthContext';
+import { AuthProvider } from './context/AuthContext';
 
 // Layout components
 import Header from './components/common/Header';
@@ -58,7 +58,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      {/* <AuthProvider> */}
+      <AuthProvider>
         <Router>
           <Header />
           <Routes>
@@ -153,7 +153,7 @@ function App() {
           </Routes>
           <Footer />
         </Router>
-      {/* </AuthProvider> */}
+      </AuthProvider>
     </ThemeProvider>
   );
 }
